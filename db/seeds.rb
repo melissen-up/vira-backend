@@ -4,7 +4,7 @@ Pose.destroy_all
 
 # # TEACHERS
 teachers = [
-    { username: "mfaulner", realname: "Melissa", password: "123", bio: "200 Hour certified yoga instructor trained at Yoga Vida, NYC", image: "https://pbs.twimg.com/profile_images/908340529318043648/9S_TJfEQ.jpg" }
+    { username: "mfaulner", realname: "Melissa", bio: "200 Hour certified yoga instructor trained at Yoga Vida, NYC", image: "https://pbs.twimg.com/profile_images/908340529318043648/9S_TJfEQ.jpg" }
 ]
 teachers.each { |teacher| Teacher.create(teacher) }
 
@@ -14,30 +14,15 @@ practices = [
 ]
 practices.each { |practice| Practice.create(practice) }
 
-# # CATEGORIES
-categories = [
-    { name: "Seated" },
-    { name: "Standing" },
-    { name: "Forward Bend" },
-    { name: "Balancing" },
-    { name: "Twists" },
-    { name: "Supine" },
-    { name: "Neutralizer" },
-    { name: "Backbend" },
-    { name: "Warm-Up" },
-    { name: "Sun Salutation" },
-    { name: "Inversion" },
-    { name: "Restorative" },
-]
-categories.each { |category| Category.create(category) }
 
 # # POSES
 poses = [
     { name_english: "Big Toe", name_sanskrit: "Padangusthasana", image: "https://pocketyoga.com/assets/images/poses/forward_bend_big_toe.png", breaths: 5, time: 0, practice_id: 1 },
     { name_english: "Hand-to-Foot", name_sanskrit: "Padanhasthasana", image: "https://pocketyoga.com/assets/images/poses/gorilla.png", breaths: 5, time: 0, practice_id: 1 },
     { name_english: "Triangle", name_sanskrit: "Trikonasana", image: "https://pocketyoga.com/assets/images/poses/triangle_forward_L.png", breaths: 3, time: 0, practice_id: 1 },
-    { name_english: "Warrior II", name_sanskrit: "Virabhadrasana II", image: "https://pocketyoga.com/assets/images/poses/warrior_II_L.png", breaths: 5, time: 0, practice_id: 1 },
-    { name_english: "Warrior I", name_sanskrit: "Virabhadrasana I", image: "https://pocketyoga.com/assets/images/poses/warrior_I_L.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Warrior III", name_sanskrit: "Virabhadrasana C", image: "https://pocketyoga.com/assets/images/poses/warrior_III_L.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Warrior II", name_sanskrit: "Virabhadrasana B", image: "https://pocketyoga.com/assets/images/poses/warrior_II_L.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Warrior I", name_sanskrit: "Virabhadrasana A", image: "https://pocketyoga.com/assets/images/poses/warrior_I_L.png", breaths: 5, time: 0, practice_id: 1 },
     { name_english: "Reverse Warrior", name_sanskrit: "Parsva Virabhadrasana", image: "https://pocketyoga.com/assets/images/poses/warrior_I_L.png", breaths: 5, time: 0, practice_id: 1 },
     { name_english: "Down Dog Split", name_sanskrit: "Eka Pada Adho Mukha Svanasana", image: "https://pocketyoga.com/assets/images/poses/downward_dog_leg_up_L.png", breaths: 3, time: 0, practice_id: 1 },
     { name_english: "Down Dog", name_sanskrit: "Adho Mukha Svanasana", image: "https://pocketyoga.com/assets/images/poses/downward_dog.png", breaths: 5, time: 0, practice_id: 1 },
@@ -63,6 +48,7 @@ poses = [
     { name_english: "Revolved Triangle", name_sanskrit: "Parivrtta Trikonasana", image: "https://pocketyoga.com/assets/images/poses/triangle_revolved_L.png", breaths: 3, time: 0, practice_id: 1 },
     { name_english: "Half Moon", name_sanskrit: "Ardha Chandrasana", image: "https://pocketyoga.com/assets/images/poses/half_moon_L.png", breaths: 5, time: 0, practice_id: 1 },
     { name_english: "Crescent Lunge on the Knee", name_sanskrit: "Anjaneyasana", image: "https://pocketyoga.com/assets/images/poses/warrior_I_kneeling_L.png", breaths: 3, time: 0, practice_id: 1 },
+    { name_english: "Crescent Lunge", name_sanskrit: "Anjaneyasana Variation", image: "https://pocketyoga.com/assets/images/poses/lunge_crescent_L.png", breaths: 3, time: 0, practice_id: 1 },
     { name_english: "Reverse Table Top", name_sanskrit: "Ardha Purvottanasana", image: "https://pocketyoga.com/assets/images/poses/table.png", breaths: 3, time: 0, practice_id: 1 },
     { name_english: "Head to Knee", name_sanskrit: "Janu Sirsasana", image: "", breaths: 0, time: 0, practice_id: 1 },
     { name_english: "Child's", name_sanskrit: "Balasana", image: "https://pocketyoga.com/assets/images/poses/child_traditional.png", breaths: 10, time: 0, practice_id: 1 },
@@ -84,9 +70,59 @@ poses = [
     { name_english: "Locust", name_sanskrit: "Salabhasana", image: "https://pocketyoga.com/assets/images/poses/locust.png", breaths: 3, time: 0, practice_id: 1 },
     { name_english: "Front Corpse", name_sanskrit: "Advasana", image: "https://pocketyoga.com/assets/images/poses/corpse_front.png", breaths: 3, time: 0, practice_id: 1 },
     { name_english: "Bow", name_sanskrit: "Dhanurasana", image: "https://pocketyoga.com/assets/images/poses/bow.png", breaths: 3, time: 0, practice_id: 1 },
-    { name_english: "", name_sanskrit: "", image: "", breaths: 0, time: 0, practice_id: 1 },
-    { name_english: "", name_sanskrit: "", image: "", breaths: 0, time: 0, practice_id: 1 },
+    { name_english: "Bridge", name_sanskrit: "Setu Bandha Sarvangasana", image: "https://pocketyoga.com/assets/images/poses/bridge.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Constructive Rest", name_sanskrit: "", image: "https://pocketyoga.com/assets/images/poses/bridge_preparation.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Wheel", name_sanskrit: "Urdhava Dhanurasana", image: "https://pocketyoga.com/assets/images/poses/wheel.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Supported Shoulder Stand", name_sanskrit: "Salamba Sarvangasana", image: "https://pocketyoga.com/assets/images/poses/shoulderstand_supported.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Plow", name_sanskrit: "Halasana", image: "https://pocketyoga.com/assets/images/poses/plow.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Fish", name_sanskrit: "Matsyasana", image: "https://pocketyoga.com/assets/images/poses/fish_preparation.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Supported Headstand", name_sanskrit: "Salamba Sirsansana", image: "https://pocketyoga.com/assets/images/poses/headstand_supported.png", breaths: 0, time: 0, practice_id: 1 },
+    { name_english: "Crow", name_sanskrit: "Bakasana", image: "https://pocketyoga.com/assets/images/poses/crow.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Cat", name_sanskrit: "Marjaryasana", image: "https://pocketyoga.com/assets/images/poses/cat.png", breaths: 1, time: 0, practice_id: 1 },
+    { name_english: "Cow", name_sanskrit: "Bitilasana", image: "https://pocketyoga.com/assets/images/poses/dog.png", breaths: 1, time: 0, practice_id: 1 },
+    { name_english: "Table", name_sanskrit: "Cakravakasana", image: "https://pocketyoga.com/assets/images/poses/box_neutral.png", breaths: 3, time: 0, practice_id: 1 },
+    { name_english: "Balancing Table", name_sanskrit: "Utthita Cakravakasana", image: "https://pocketyoga.com/assets/images/poses/cat_balance_L.png", breaths: 3, time: 0, practice_id: 1 },
+    { name_english: "Dancer", name_sanskrit: "Natarajasana", image: "https://pocketyoga.com/assets/images/poses/lord_of_the_dance_L.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Dophin", name_sanskrit: "Ardha Pincha Mayurasana", image: "https://pocketyoga.com/assets/images/poses/dolphin.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Forearm Balance", name_sanskrit: "Pincha Mayurasana", image: "https://pocketyoga.com/assets/images/poses/feathered_peacock.png", breaths: 10, time: 0, practice_id: 1 },
     { name_english: "", name_sanskrit: "", image: "", breaths: 0, time: 0, practice_id: 1 },
 ]
 poses.each { |pose| Pose.create(pose) }
 
+# # CATEGORIES
+categories = [
+    { name: "Seated" },
+    { name: "Standing" },
+    { name: "Forward Bend" },
+    { name: "Balancing" },
+    { name: "Twists" },
+    { name: "Supine" },
+    { name: "Neutralizer" },
+    { name: "Backbend" },
+    { name: "Warm-Up" },
+    { name: "Sun Salutation" },
+    { name: "Inversion" },
+    { name: "Restorative" },
+]
+categories.each { |category| Category.create(category) }
+
+# # POSECATEGORIES
+
+# pose_categories = [
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+#     { category_id: , pose_id: }
+# ]
+
+puts "✨🧘🏼‍♀️✨🧘🏼‍♀️✨🧘🏼‍♀️ SEEDED 🧘🏼‍♀️✨🧘🏼‍♀️✨🧘🏼‍♀️✨🧘🏼‍♀️✨"

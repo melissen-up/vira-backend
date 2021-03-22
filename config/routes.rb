@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
-  resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  # Teacher Routes
+  post "/login", to: "teacher#login"
+  post "/signup", to: "teachers#signup"
+  get "/current-user", to: "teachers#show"
+  get "/teacher/index", to: "teachers#index"
+  get "/teacher/:id", to: "teachers#profile"
+  
+  # Practice Routes
+  get "/practice/index", to: "practices#index"
+  get "/practice/:id", to: "practices#show"
+  
+  # Pose Routes
+  get "/pose/index", to: "poses#index"
+
 end
