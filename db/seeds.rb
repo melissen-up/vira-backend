@@ -1,6 +1,16 @@
-Teacher.destroy_all
-Practice.destroy_all
+PoseCategory.destroy_all
 Pose.destroy_all
+Category.destroy_all
+Practice.destroy_all
+Teacher.destroy_all
+
+PoseCategory.reset_pk_sequence
+Pose.reset_pk_sequence
+Category.reset_pk_sequence
+Practice.reset_pk_sequence
+Teacher.reset_pk_sequence
+
+
 
 # # TEACHERS
 teachers = [
@@ -13,7 +23,6 @@ practices = [
     { teacher_id: 1, name: "Easy Vinyasa Flow", length: 60, description: "An easy, hour-long flow for days when you're feeling in need of a boost" }
 ]
 practices.each { |practice| Practice.create(practice) }
-
 
 # # POSES
 poses = [
@@ -103,11 +112,11 @@ categories = [
     { name: "Sun Salutation" },
     { name: "Inversion" },
     { name: "Restorative" },
+    { name: "Hip Opener" }
 ]
 categories.each { |category| Category.create(category) }
 
-# # POSECATEGORIES
-
+# # POSE_CATEGORIES
 pose_categories = [
     { category_id: 2, pose_id: 1},
     { category_id: 3, pose_id: 1},
@@ -168,28 +177,62 @@ pose_categories = [
     { category_id: 2, pose_id: 32},
     { category_id: 4, pose_id: 32},
     { category_id: 8, pose_id: 33},
+    { category_id: 7, pose_id: 33},
     { category_id: 2, pose_id: 34},
     { category_id: 3, pose_id: 34},
     { category_id: 1, pose_id: 35},
     { category_id: 3, pose_id: 35},
     { category_id: 1, pose_id: 36},
     { category_id: 3, pose_id: 36},
-    { category_id: , pose_id: 37},
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: },
-    { category_id: , pose_id: }
+    { category_id: 2, pose_id: 37},
+    { category_id: 4, pose_id: 37},
+    { category_id: 1, pose_id: 38},
+    { category_id: 3, pose_id: 38},
+    { category_id: 13, pose_id: 38},
+    { category_id: 1, pose_id: 39},
+    { category_id: 5, pose_id: 39},
+    { category_id: 1, pose_id: 40},
+    { category_id: 1, pose_id: 41},
+    { category_id: 3, pose_id: 42},
+    { category_id: 1, pose_id: 42},
+    { category_id: 4, pose_id: 43},
+    { category_id: 8, pose_id: 44},
+    { category_id: 4, pose_id: 45},
+    { category_id: 8, pose_id: 46},
+    { category_id: 6, pose_id: 47},
+    { category_id: 13, pose_id: 47},
+    { category_id: 7, pose_id: 47},
+    { category_id: 6, pose_id: 48},
+    { category_id: 8, pose_id: 49},
+    { category_id: 8, pose_id: 50},
+    { category_id: 8, pose_id: 51},
+    { category_id: 7, pose_id: 52},
+    { category_id: 8, pose_id: 53},
+    { category_id: 8, pose_id: 54},
+    { category_id: 7, pose_id: 55},
+    { category_id: 6, pose_id: 55},
+    { category_id: 8, pose_id: 56},
+    { category_id: 11, pose_id: 57},
+    { category_id: 11, pose_id: 58},
+    { category_id: 8, pose_id: 58},
+    { category_id: 8, pose_id: 59},
+    { category_id: 1, pose_id: 59},
+    { category_id: 11, pose_id: 60},
+    { category_id: 4, pose_id: 61},
+    { category_id: 8, pose_id: 61},
+    { category_id: 9, pose_id: 62},
+    { category_id: 8, pose_id: 62},
+    { category_id: 9, pose_id: 63},
+    { category_id: 8, pose_id: 63},
+    { category_id: 9, pose_id: 64},
+    { category_id: 7, pose_id: 64},
+    { category_id: 4, pose_id: 65},
+    { category_id: 8, pose_id: 66},
+    { category_id: 2, pose_id: 66},
+    { category_id: 4, pose_id: 66},
+    { category_id: 3, pose_id: 67},
+    { category_id: 4, pose_id: 68}
 ]
 pose_categories.each{ |pose_category| PoseCategory.create(pose_category) }
 
-puts "✨🧘🏼‍♀️✨🧘🏼‍♀️✨🧘🏼‍♀️ SEEDED 🧘🏼‍♀️✨🧘🏼‍♀️✨🧘🏼‍♀️✨🧘🏼‍♀️✨"
+puts "✨🧘✨🧘✨🧘 SEEDED 🧘✨🧘✨🧘✨🧘✨"

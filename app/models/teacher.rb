@@ -3,5 +3,4 @@ class Teacher < ApplicationRecord
     has_many :poses, through: :practices
 
     validates :username, uniqueness: { case_sensitive: false }
-    validates :email, uniqueness: { case_sensitive: false }
 end
