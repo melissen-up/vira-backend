@@ -17,7 +17,7 @@ practices.each { |practice| Practice.create(practice) }
 
 # # POSES
 poses = [
-    { name_english: "Big Toe", name_sanskrit: "Padangusthasana", image: "https://pocketyoga.com/assets/images/poses/forward_bend_big_toe.png", breaths: 5, time: 0, practice_id: 1 },
+    { name_english: "Big Toe", name_sanskrit: "Padangusthasana", description: "Begin by standing with your feet hip width apart. Hinge forward from your hips with a long, flat back and fold your torso over your thighs. Try to connect your chest to your thighs by hollowing out your lower belly. Send your sit bones high, draw your knee caps up and relax your hamstrings. Slide your index and middle fingers of each hand between the big toes and the second toes. Then curl those fingers under and grip the big toes firmly, wrapping your thumbs around the other two fingers to secure the wrap. Press your toes down against your fingers.", image: "https://pocketyoga.com/assets/images/poses/forward_bend_big_toe.png", breaths: 5, time: 0, practice_id: 1 },
     { name_english: "Hand-to-Foot", name_sanskrit: "Padanhasthasana", image: "https://pocketyoga.com/assets/images/poses/gorilla.png", breaths: 5, time: 0, practice_id: 1 },
     { name_english: "Triangle", name_sanskrit: "Trikonasana", image: "https://pocketyoga.com/assets/images/poses/triangle_forward_L.png", breaths: 3, time: 0, practice_id: 1 },
     { name_english: "Warrior III", name_sanskrit: "Virabhadrasana C", image: "https://pocketyoga.com/assets/images/poses/warrior_III_L.png", breaths: 5, time: 0, practice_id: 1 },
@@ -50,7 +50,7 @@ poses = [
     { name_english: "Crescent Lunge on the Knee", name_sanskrit: "Anjaneyasana", image: "https://pocketyoga.com/assets/images/poses/warrior_I_kneeling_L.png", breaths: 3, time: 0, practice_id: 1 },
     { name_english: "Crescent Lunge", name_sanskrit: "Anjaneyasana Variation", image: "https://pocketyoga.com/assets/images/poses/lunge_crescent_L.png", breaths: 3, time: 0, practice_id: 1 },
     { name_english: "Reverse Table Top", name_sanskrit: "Ardha Purvottanasana", image: "https://pocketyoga.com/assets/images/poses/table.png", breaths: 3, time: 0, practice_id: 1 },
-    { name_english: "Head to Knee", name_sanskrit: "Janu Sirsasana", image: "", breaths: 0, time: 0, practice_id: 1 },
+    { name_english: "Head to Knee", name_sanskrit: "Janu Sirsasana", image: "", breaths: 5, time: 0, practice_id: 1 },
     { name_english: "Child's", name_sanskrit: "Balasana", image: "https://pocketyoga.com/assets/images/poses/child_traditional.png", breaths: 10, time: 0, practice_id: 1 },
     { name_english: "Extended Wide Child's", name_sanskrit: "Utthita Balasana", image: "https://pocketyoga.com/assets/images/poses/child_wide.png", breaths: 10, time: 0, practice_id: 1 },
     { name_english: "Lunge", name_sanskrit: "Anjaneyasana Variation", image: "https://pocketyoga.com/assets/images/poses/lunge_L.png", breaths: 3, time: 0, practice_id: 1 },
@@ -108,21 +108,88 @@ categories.each { |category| Category.create(category) }
 
 # # POSECATEGORIES
 
-# pose_categories = [
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-#     { category_id: , pose_id: }
-# ]
+pose_categories = [
+    { category_id: 2, pose_id: 1},
+    { category_id: 3, pose_id: 1},
+    { category_id: 2, pose_id: 2},
+    { category_id: 3, pose_id: 2},
+    { category_id: 2, pose_id: 3},
+    { category_id: 2, pose_id: 4},
+    { category_id: 4, pose_id: 4},
+    { category_id: 2, pose_id: 5},
+    { category_id: 2, pose_id: 6},
+    { category_id: 2, pose_id: 7},
+    { category_id: 3, pose_id: 8},
+    { category_id: 4, pose_id: 8},
+    { category_id: 3, pose_id: 9},
+    { category_id: 2, pose_id: 10},
+    { category_id: 2, pose_id: 11},
+    { category_id: 2, pose_id: 12},
+    { category_id: 5, pose_id: 12},
+    { category_id: 3, pose_id: 13},
+    { category_id: 2, pose_id: 14},
+    { category_id: 4, pose_id: 14},
+    { category_id: 2, pose_id: 15},
+    { category_id: 4, pose_id: 15},
+    { category_id: 2, pose_id: 16},
+    { category_id: 4, pose_id: 16},
+    { category_id: 2, pose_id: 17},
+    { category_id: 2, pose_id: 18},
+    { category_id: 5, pose_id: 18},
+    { category_id: 4, pose_id: 19},
+    { category_id: 10, pose_id: 19},
+    { category_id: 2, pose_id: 20},
+    { category_id: 10, pose_id: 20},
+    { category_id: 3, pose_id: 20},
+    { category_id: 2, pose_id: 21},
+    { category_id: 10, pose_id: 21},
+    { category_id: 3, pose_id: 21},
+    { category_id: 2, pose_id: 22},
+    { category_id: 10, pose_id: 22},
+    { category_id: 2, pose_id: 23},
+    { category_id: 10, pose_id: 23},
+    { category_id: 7, pose_id: 23},
+    { category_id: 1, pose_id: 24},
+    { category_id: 4, pose_id: 24},
+    { category_id: 1, pose_id: 25},
+    { category_id: 4, pose_id: 25},
+    { category_id: 6, pose_id: 26},
+    { category_id: 7, pose_id: 26},
+    { category_id: 1, pose_id: 27},
+    { category_id: 3, pose_id: 27},
+    { category_id: 2, pose_id: 28},
+    { category_id: 3, pose_id: 28},
+    { category_id: 2, pose_id: 29},
+    { category_id: 5, pose_id: 29},
+    { category_id: 2, pose_id: 30},
+    { category_id: 4, pose_id: 30},
+    { category_id: 2, pose_id: 31},
+    { category_id: 4, pose_id: 31},
+    { category_id: 2, pose_id: 32},
+    { category_id: 4, pose_id: 32},
+    { category_id: 8, pose_id: 33},
+    { category_id: 2, pose_id: 34},
+    { category_id: 3, pose_id: 34},
+    { category_id: 1, pose_id: 35},
+    { category_id: 3, pose_id: 35},
+    { category_id: 1, pose_id: 36},
+    { category_id: 3, pose_id: 36},
+    { category_id: , pose_id: 37},
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: },
+    { category_id: , pose_id: }
+]
+pose_categories.each{ |pose_category| PoseCategory.create(pose_category) }
 
 puts "✨🧘🏼‍♀️✨🧘🏼‍♀️✨🧘🏼‍♀️ SEEDED 🧘🏼‍♀️✨🧘🏼‍♀️✨🧘🏼‍♀️✨🧘🏼‍♀️✨"

@@ -13,5 +13,10 @@ Rails.application.routes.draw do
   
   # Pose Routes
   get "/pose/index", to: "poses#index"
-
+  get "/pose/:id", to: "poses#show"
+  
+  # Category Routes
+  get "/category/index", to: "categories#index"
+  get "/category/:id", to: "categories#show"
+  
 end
