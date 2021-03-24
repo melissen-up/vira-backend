@@ -3,7 +3,7 @@ class TeachersController < ApplicationController
     before_action :authenticate, only: [:show, :update]
 
     def login
-        teacher = Teacher.findy_by(username: params[:username])
+        teacher = Teacher.find_by(username: params[:username])
         if teacher && teacher.authenticate(params[:password])
             token = JWT.encode({ teacher_id: teacher.id }, 'my$ecretK3y', 'HS256')
             render json: { teacher: TeacherSerializer.new(teacher), token: token}

@@ -11,10 +11,10 @@ Practice.reset_pk_sequence
 Teacher.reset_pk_sequence
 
 
-
 # # TEACHERS
 teachers = [
-    { username: "mfaulner", realname: "Melissa", bio: "200 Hour certified yoga instructor trained at Yoga Vida, NYC", image: "https://pbs.twimg.com/profile_images/908340529318043648/9S_TJfEQ.jpg" }
+    { username: "mfaulner", password: "123", realname: "Melissa", bio: "200-hour certified yoga instructor trained at Yoga Vida, NYC", image: "https://pbs.twimg.com/profile_images/908340529318043648/9S_TJfEQ.jpg" },
+    { username: "lukesky", password: "123", realname: "Luke", bio: "500-hour ashtanga yogi; primary sequence every day and an ayuvedic diet does wonders!", image: "https://static.wikia.nocookie.net/swfanon/images/b/bc/Jedi_Master_Skywalker.jpg/revision/latest?cb=20160405192015" }
 ]
 teachers.each { |teacher| Teacher.create(teacher) }
 
@@ -94,7 +94,6 @@ poses = [
     { name_english: "Dancer", name_sanskrit: "Natarajasana", image: "https://pocketyoga.com/assets/images/poses/lord_of_the_dance_L.png", breaths: 5, time: 0, practice_id: 1 },
     { name_english: "Dophin", name_sanskrit: "Ardha Pincha Mayurasana", image: "https://pocketyoga.com/assets/images/poses/dolphin.png", breaths: 5, time: 0, practice_id: 1 },
     { name_english: "Forearm Balance", name_sanskrit: "Pincha Mayurasana", image: "https://pocketyoga.com/assets/images/poses/feathered_peacock.png", breaths: 10, time: 0, practice_id: 1 },
-    { name_english: "", name_sanskrit: "", image: "", breaths: 0, time: 0, practice_id: 1 },
 ]
 poses.each { |pose| Pose.create(pose) }
 

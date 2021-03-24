@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   # Teacher Routes
-  post "/login", to: "teacher#login"
+  post "/login", to: "teachers#login"
   post "/signup", to: "teachers#signup"
   get "/current-user", to: "teachers#show"
   get "/teacher/index", to: "teachers#index"
