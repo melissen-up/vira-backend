@@ -1,4 +1,4 @@
 class Practice < ApplicationRecord
-  belongs_to :teacher
-  has_many :poses
+  has_many :practice_poses
+  has_many :poses, through: :practice_poses
 end

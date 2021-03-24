@@ -13,7 +13,7 @@ class TeachersController < ApplicationController
     end
 
     def signup
-        teacher_params = params.permit(:username, :password)
+        teacher_params = params.permit(:username, :password, :realname)
 
         teacher = Teacher.create(teacher_params)
         if teacher.valid?
@@ -31,6 +31,14 @@ class TeachersController < ApplicationController
     end
 
     def show
+        render json: @current_user
+    end
+
+    def update
+        teacher_params = params.permit(:username, :password, :realname, :bio, :image)
+
+        @current_user.update(teacher_params)
+
         render json: @current_user
     end
 

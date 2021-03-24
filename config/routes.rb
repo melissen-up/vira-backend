@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post "/login", to: "teachers#login"
   post "/signup", to: "teachers#signup"
   get "/current-user", to: "teachers#show"
+  patch "/current-user", to: "teachers#update"
   get "/teacher/index", to: "teachers#index"
   get "/teacher/:id", to: "teachers#profile"
   
