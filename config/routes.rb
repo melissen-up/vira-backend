@@ -12,7 +12,8 @@ Rails.application.routes.draw do
   get "/practice/index", to: "practices#index"
   get "/practice/:id", to: "practices#show"
   post "/practice/new", to: "practices#create"
-  patch "/practice/:id/update", to: "practices#update"
+  patch "/practice/:id/update-details/", to: "practices#update_details"
+  patch "/practice/:id/update-poses/:id", to: "practices#update_poses"
   delete "/practice/:id", to: "practices#delete"
   
   # Pose Routes
